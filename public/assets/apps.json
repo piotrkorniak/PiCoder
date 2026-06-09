@@ -1,0 +1,10 @@
+[
+  {
+    "id": "dronemesh3d",
+    "name": "DroneMesh3D",
+    "description": "Aplikacja do planowania lotów dronów i generowania siatek 3D",
+    "url": "https://dronemesh3d.picoder.top",
+    "icon": "assets/icons/dronemesh3d.svg",
+    "status": "aktywna"
+  }
+]

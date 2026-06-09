@@ -1,0 +1,33 @@
+.footer {
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg-secondary);
+  transition: var(--transition-theme);
+}
+
+.footer-content {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.separator {
+  margin: 0 0.5rem;
+}
+
+.github-link {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+.github-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

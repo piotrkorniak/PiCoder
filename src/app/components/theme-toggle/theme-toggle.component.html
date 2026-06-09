@@ -1,0 +1,7 @@
+<button (click)="themeService.toggleTheme()" role="switch" [attr.aria-checked]="isDark()" [attr.aria-label]="'Przełącz motyw'">
+  @if (isDark()) {
+    <span class="icon">☀️</span>
+  } @else {
+    <span class="icon">🌙</span>
+  }
+</button>
