@@ -1,0 +1,21 @@
+<article class="card" [class.card--disabled]="!isClickable()">
+  <div class="card__icon">
+    <img [src]="app().icon" [alt]="app().name + ' icon'" class="card__icon-img" />
+  </div>
+  <div class="card__content">
+    <div class="card__header">
+      <h3 class="card__name">{{ truncateName }}</h3>
+      <span class="card__status" [style.background-color]="statusColor()">
+        {{ statusLabel() }}
+      </span>
+    </div>
+    <p class="card__description">{{ truncateDesc }}</p>
+    @if (isClickable()) {
+      <a class="card__link" [href]="app().url" target="_blank" rel="noopener" [attr.aria-label]="'Otwórz ' + app().name + ' w nowej karcie'">
+        Otwórz aplikację
+      </a>
+    } @else {
+      <span class="card__link card__link--disabled" aria-disabled="true">Niedostępna</span>
+    }
+  </div>
+</article>

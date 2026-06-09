@@ -1,0 +1,123 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  padding: 1.5rem;
+  transition: var(--transition-theme);
+  gap: 1rem;
+}
+
+.card:hover:not(.card--disabled) {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card--disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: var(--color-bg-secondary);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.card__icon-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.card__name {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card__status {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card__description {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card__link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  text-decoration: none;
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  text-align: center;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+.card__link:hover {
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.card__link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.card__link--disabled {
+  color: var(--color-text-secondary);
+  border-color: var(--color-border);
+  cursor: default;
+  pointer-events: none;
+}
+
+.card__link--disabled:hover {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+}

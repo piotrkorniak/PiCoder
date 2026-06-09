@@ -1,0 +1,11 @@
+@if (appRegistry.isEmpty()) {
+  <div class="app-grid__empty">
+    <p>Brak zdefiniowanych aplikacji</p>
+  </div>
+} @else {
+  <div class="app-grid">
+    @for (app of appRegistry.validApps(); track app.id) {
+      <app-card [app]="app" />
+    }
+  </div>
+}
