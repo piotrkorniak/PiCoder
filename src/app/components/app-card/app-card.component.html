@@ -4,12 +4,12 @@
   </div>
   <div class="card__content">
     <div class="card__header">
-      <h3 class="card__name">{{ truncateName }}</h3>
+      <h3 class="card__name">{{ truncateName() }}</h3>
       <span class="card__status" [style.background-color]="statusColor()">
         {{ statusLabel() }}
       </span>
     </div>
-    <p class="card__description">{{ truncateDesc }}</p>
+    <p class="card__description">{{ truncateDesc() }}</p>
     @if (isClickable()) {
       <a class="card__link" [href]="app().url" target="_blank" rel="noopener" [attr.aria-label]="'Otwórz ' + app().name + ' w nowej karcie'">
         Otwórz aplikację

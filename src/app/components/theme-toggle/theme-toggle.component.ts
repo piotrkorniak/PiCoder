@@ -8,6 +8,6 @@ import { ThemeService } from '../../services/theme.service';
   styleUrl: './theme-toggle.component.css',
 })
 export class ThemeToggleComponent {
-  readonly themeService = inject(ThemeService);
+  protected readonly themeService = inject(ThemeService);
   readonly isDark = computed(() => this.themeService.currentTheme() === 'dark');
 }
