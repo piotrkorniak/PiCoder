@@ -40,13 +40,13 @@ export class AppCardComponent {
     }
   });
 
-  protected get truncateName(): string {
+  readonly truncateName = computed(() => {
     const name = this.app().name;
     return name.length > 50 ? name.substring(0, 50) + '…' : name;
-  }
+  });
 
-  protected get truncateDesc(): string {
+  readonly truncateDesc = computed(() => {
     const desc = this.app().description;
     return desc.length > 150 ? desc.substring(0, 150) + '…' : desc;
-  }
+  });
 }
